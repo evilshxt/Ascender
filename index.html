@@ -1,3 +1,4 @@
+<!-- Test Project Only, test, for production actual pages would be added and linked to, and for features and assets they would be made later -->
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -67,7 +68,7 @@
           </button>
         </div>
       </nav>
-      <!-- Mobile menu (hidden by default) -->
+      <!-- Mobile menu -->
       <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
         <ul class="flex flex-col gap-4 text-base font-semibold">
           <li><a href="#home" class="hover:text-primary transition">Home</a></li>
@@ -119,7 +120,7 @@
       </div>
     </section>
 
-    <!-- What We Offer -->
+    <!-- What We Offer, using placeholder content untill actual assets are delivered -->
     <section id="equipment" class="py-20 bg-light">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
@@ -170,7 +171,7 @@
       </div>
     </section>
 
-    <!-- Equipment Showcase -->
+    <!-- Equipment Showcase, demo data and images -->
     <section class="py-12 bg-charcoal text-white">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
@@ -215,7 +216,7 @@
       </div>
     </section>
 
-    <!-- Industry Applications -->
+    <!-- Industry Applications, demo data -->
     <section id="solutions" class="py-20 bg-light">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
@@ -308,7 +309,7 @@
       </div>
     </section>
 
-    <!-- News / Insights -->
+    <!-- News / Insights - Would need confirmation to keep or scrap -->
     <section id="projects" class="py-20 bg-light">
       <div class="max-w-7xl mx-auto px-4">
         <div class="text-center mb-12">
@@ -487,11 +488,9 @@
       AOS.init({ once: true, duration: 900, offset: 60 });
       // Feather Icons
       feather.replace();
-      // Mobile menu toggle
       document.getElementById('menu-btn').onclick = function() {
         document.getElementById('mobile-menu').classList.toggle('hidden');
       };
-      // Close mobile menu when clicking a link
       document.querySelectorAll('#mobile-menu a').forEach(item => {
         item.addEventListener('click', () => {
           document.getElementById('mobile-menu').classList.add('hidden');
