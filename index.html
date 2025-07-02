@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCENDER | Empowering Africa's Mining Future</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#f57c00',
+              charcoal: '#1a1a1a',
+              light: '#f9f9f9',
+            },
+            fontFamily: {
+              sans: ['Rajdhani', 'sans-serif'],
+              logo: ['Orbitron', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Heroicons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      body { font-family: 'Rajdhani', sans-serif; }
+      .font-logo { font-family: 'Orbitron', sans-serif; }
+      .stats-card {
+        background: linear-gradient(135deg, rgba(245,124,0,0.1) 0%, rgba(245,124,0,0.05) 100%);
+        border-left: 4px solid #f57c00;
+      }
+      .news-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-light text-charcoal">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow">
+      <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3">
+          <span class="font-logo text-2xl font-bold text-primary tracking-widest">ASCENDER</span>
+        </div>
+        <ul class="hidden md:flex gap-8 text-base font-semibold">
+          <li><a href="#home" class="hover:text-primary transition">Home</a></li>
+          <li><a href="#equipment" class="hover:text-primary transition">Equipment</a></li>
+          <li><a href="#solutions" class="hover:text-primary transition">Solutions</a></li>
+          <li><a href="#projects" class="hover:text-primary transition">Projects</a></li>
+          <li><a href="#about" class="hover:text-primary transition">About</a></li>
+          <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+          <button class="border border-primary text-primary px-3 py-1 rounded font-bold text-xs">EN</button>
+          <button class="md:hidden" id="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile menu (hidden by default) -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <ul class="flex flex-col gap-4 text-base font-semibold">
+          <li><a href="#home" class="hover:text-primary transition">Home</a></li>
+          <li><a href="#equipment" class="hover:text-primary transition">Equipment</a></li>
+          <li><a href="#solutions" class="hover:text-primary transition">Solutions</a></li>
+          <li><a href="#projects" class="hover:text-primary transition">Projects</a></li>
+          <li><a href="#about" class="hover:text-primary transition">About</a></li>
+          <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[80vh] flex items-center justify-center bg-charcoal text-white overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80" alt="African mining" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+      <div class="relative z-10 max-w-3xl text-center py-24 px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 font-logo tracking-widest" id="hero-title">Empowering Africa's Mining Future</h1>
+        <p class="text-lg md:text-2xl mb-8 font-semibold">Gold Mining Equipment & Industrial Solutions for a New Era</p>
+        <a href="#equipment" class="inline-block bg-primary text-white px-8 py-3 rounded shadow-lg font-bold text-lg hover:bg-orange-600 transition">Explore Equipment</a>
+        <div class="mt-16 flex flex-col items-center">
+          <span class="text-sm uppercase tracking-widest mb-2">Scroll Down</span>
+          <svg class="animate-bounce w-7 h-7 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+        </div>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-primary text-white py-8">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-6 text-center">
+          <div class="stats-card p-6 rounded-lg">
+            <p class="text-3xl font-bold mb-2">15+</p>
+            <p class="text-sm font-medium">Years Experience</p>
+          </div>
+          <div class="stats-card p-6 rounded-lg">
+            <p class="text-3xl font-bold mb-2">200+</p>
+            <p class="text-sm font-medium">Projects Completed</p>
+          </div>
+          <div class="stats-card p-6 rounded-lg">
+            <p class="text-3xl font-bold mb-2">50+</p>
+            <p class="text-sm font-medium">Equipment Types</p>
+          </div>
+          <div class="stats-card p-6 rounded-lg">
+            <p class="text-3xl font-bold mb-2">24/7</p>
+            <p class="text-sm font-medium">Support Available</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section id="equipment" class="py-20 bg-light">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-primary font-bold uppercase tracking-widest text-sm">Our Offerings</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-charcoal mt-2" data-aos="fade-up">Mining Equipment & Solutions</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-primary/10 p-4 rounded-full mb-4">
+              <i data-feather="settings" class="w-10 h-10 text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Equipment Sales</h3>
+            <p class="text-center text-charcoal/80 mb-4">Jaw Crushers, Ball Mills, Shaker Tables, and more — robust machinery for gold mining and heavy industry.</p>
+            <ul class="text-sm text-charcoal/70 space-y-1 text-center">
+              <li>• Jaw Crushers</li>
+              <li>• Ball Mills</li>
+              <li>• Shaker Tables</li>
+              <li>• Gold Concentrators</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-primary/10 p-4 rounded-full mb-4">
+              <i data-feather="tool" class="w-10 h-10 text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Servicing</h3>
+            <p class="text-center text-charcoal/80 mb-4">Comprehensive maintenance, repairs, and equipment upgrades for maximum uptime and safety.</p>
+            <ul class="text-sm text-charcoal/70 space-y-1 text-center">
+              <li>• Preventive Maintenance</li>
+              <li>• Emergency Repairs</li>
+              <li>• Equipment Upgrades</li>
+              <li>• Spare Parts Supply</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-8 flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-primary/10 p-4 rounded-full mb-4">
+              <i data-feather="briefcase" class="w-10 h-10 text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Custom Projects</h3>
+            <p class="text-center text-charcoal/80 mb-4">Turnkey gold recovery systems, custom fabrication, and engineering solutions tailored to your site.</p>
+            <ul class="text-sm text-charcoal/70 space-y-1 text-center">
+              <li>• Turnkey Plants</li>
+              <li>• Custom Fabrication</li>
+              <li>• Engineering Solutions</li>
+              <li>• Site Installation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment Showcase -->
+    <section class="py-12 bg-charcoal text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-primary font-bold uppercase tracking-widest text-sm">Featured Equipment</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2" data-aos="fade-up">Premium Mining Machinery</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white/10 rounded-lg overflow-hidden" data-aos="fade-up">
+            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Jaw Crusher" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Jaw Crushers</h3>
+              <p class="text-light/80 mb-4">Heavy-duty crushers for primary crushing of gold ore and hard rock.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-primary font-bold">From $25,000</span>
+                <button class="text-sm bg-primary px-4 py-1 rounded">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white/10 rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ball Mill" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Ball Mills</h3>
+              <p class="text-light/80 mb-4">Grinding mills for efficient gold ore processing and mineral liberation.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-primary font-bold">From $18,000</span>
+                <button class="text-sm bg-primary px-4 py-1 rounded">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white/10 rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1581093196270-9c17b9745b4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Shaker Table" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Shaker Tables</h3>
+              <p class="text-light/80 mb-4">Gravity separation equipment for fine gold recovery and concentration.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-primary font-bold">From $12,500</span>
+                <button class="text-sm bg-primary px-4 py-1 rounded">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry Applications -->
+    <section id="solutions" class="py-20 bg-light">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-primary font-bold uppercase tracking-widest text-sm">Our Expertise</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-charcoal mt-2" data-aos="fade-up">Industry Applications</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-primary/20 p-4 rounded-full mb-4">
+              <i data-feather="truck" class="w-10 h-10 text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Mining</h3>
+            <p class="text-center text-charcoal/80 mb-4">Solutions for gold, bauxite, and mineral extraction — from pit to plant.</p>
+            <ul class="text-sm text-charcoal/70 space-y-1 text-center">
+              <li>• Gold Mining Equipment</li>
+              <li>• Mineral Processing</li>
+              <li>• Ore Beneficiation</li>
+              <li>• Mine Site Services</li>
+            </ul>
+          </div>
+          <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-primary/20 p-4 rounded-full mb-4">
+              <i data-feather="layers" class="w-10 h-10 text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Quarrying</h3>
+            <p class="text-center text-charcoal/80 mb-4">Heavy equipment and systems for aggregate, stone, and sand production.</p>
+            <ul class="text-sm text-charcoal/70 space-y-1 text-center">
+              <li>• Aggregate Processing</li>
+              <li>• Rock Crushing</li>
+              <li>• Screening Plants</li>
+              <li>• Conveying Systems</li>
+            </ul>
+          </div>
+          <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-primary/20 p-4 rounded-full mb-4">
+              <i data-feather="hard-drive" class="w-10 h-10 text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Civil Engineering</h3>
+            <p class="text-center text-charcoal/80 mb-4">Custom fabrication and project engineering for infrastructure and construction.</p>
+            <ul class="text-sm text-charcoal/70 space-y-1 text-center">
+              <li>• Structural Fabrication</li>
+              <li>• Heavy Lifting</li>
+              <li>• Site Installation</li>
+              <li>• Project Engineering</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-charcoal text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <span class="text-primary font-bold uppercase tracking-widest text-sm">About Us</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Mining Excellence Since 2008</h2>
+            <p class="text-light/80 mb-4">ASCENDER is a leading provider of mining equipment and industrial solutions across West Africa, headquartered in Tarkwa, Ghana's gold mining hub.</p>
+            <p class="text-light/80 mb-6">Our team of engineers and technicians brings decades of combined experience in gold mining equipment, mineral processing, and heavy industry solutions.</p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <i data-feather="check-circle" class="w-5 h-5 text-primary mt-1 flex-shrink-0"></i>
+                <p class="text-light/90">Locally-based engineering expertise with global standards</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-feather="check-circle" class="w-5 h-5 text-primary mt-1 flex-shrink-0"></i>
+                <p class="text-light/90">Comprehensive after-sales support and maintenance</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-feather="check-circle" class="w-5 h-5 text-primary mt-1 flex-shrink-0"></i>
+                <p class="text-light/90">Custom solutions tailored to African mining conditions</p>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-left">
+            <div class="bg-white/10 rounded-lg overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.112052189387!2d-1.991683924370146!3d5.300727434662397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdbd3a0cff0a6a5%3A0x6f6b2f5b7a6a5f5e!2sTarkwa%2C%20Ghana!5e0!3m2!1sen!2sus!4v1712345678901!5m2!1sen!2sus" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News / Insights -->
+    <section id="projects" class="py-20 bg-light">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-primary font-bold uppercase tracking-widest text-sm">Latest Updates</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-charcoal mt-2" data-aos="fade-up">Insights & News</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden news-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Gold Recovery System" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-xs text-primary font-bold uppercase">Technology</span>
+              <h4 class="text-lg font-bold mb-2 mt-1">ASCENDER Launches Next-Gen Gold Recovery System</h4>
+              <p class="text-charcoal/80 text-sm mb-4">Our new modular plant delivers 20% higher yield for West African miners while reducing water consumption by 15%.</p>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-charcoal/60">May 15, 2024</span>
+                <a href="#" class="text-primary font-bold flex items-center gap-1">
+                  Read more <i data-feather="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden news-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1581093057305-25a0a6b9c8c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tarkwa Project" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-xs text-primary font-bold uppercase">Case Study</span>
+              <h4 class="text-lg font-bold mb-2 mt-1">Engineering Spotlight: Tarkwa Project</h4>
+              <p class="text-charcoal/80 text-sm mb-4">How ASCENDER's team delivered a custom solution for a major Ghanaian mine, increasing throughput by 30%.</p>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-charcoal/60">April 28, 2024</span>
+                <a href="#" class="text-primary font-bold flex items-center gap-1">
+                  Read more <i data-feather="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden news-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Safety in Mining" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-xs text-primary font-bold uppercase">Sustainability</span>
+              <h4 class="text-lg font-bold mb-2 mt-1">Safety & Sustainability in Mining</h4>
+              <p class="text-charcoal/80 text-sm mb-4">Our commitment to safe, responsible operations across Africa with new training initiatives and eco-friendly solutions.</p>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-charcoal/60">March 10, 2024</span>
+                <a href="#" class="text-primary font-bold flex items-center gap-1">
+                  Read more <i data-feather="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="#" class="inline-block border border-primary text-primary px-6 py-2 rounded font-bold hover:bg-primary hover:text-white transition">
+            View All News
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-charcoal text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-primary font-bold uppercase tracking-widest text-sm">Client Voices</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2" data-aos="fade-up">What Our Clients Say</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/10 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center mb-4">
+              <div class="text-primary mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold">Kwame Asante</h4>
+                <p class="text-sm text-light/60">Gold Fields Ghana</p>
+              </div>
+            </div>
+            <p class="text-light/80">"ASCENDER's equipment and service have been instrumental in increasing our gold recovery rates by 22%. Their team's expertise in African mining conditions is unmatched."</p>
+          </div>
+          <div class="bg-white/10 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center mb-4">
+              <div class="text-primary mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold">Amina Diallo</h4>
+                <p class="text-sm text-light/60">Mali Mineral Resources</p>
+              </div>
+            </div>
+            <p class="text-light/80">"The custom gold processing plant ASCENDER built for us has operated flawlessly for 18 months with minimal downtime. Their after-sales support is exceptional."</p>
+          </div>
+          <div class="bg-white/10 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-center mb-4">
+              <div class="text-primary mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold">David Okafor</h4>
+                <p class="text-sm text-light/60">Nigerian Mining Co.</p>
+              </div>
+            </div>
+            <p class="text-light/80">"We've worked with ASCENDER on three major projects. Each time they've delivered on time and within budget while meeting our technical specifications exactly."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Ready to Elevate Your Mining Operations?</h2>
+        <p class="text-lg mb-8" data-aos="fade-up" data-aos-delay="100">Contact our team of experts to discuss your project requirements and discover how ASCENDER can deliver solutions tailored to your needs.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
+          <a href="#contact" class="bg-white text-primary px-8 py-3 rounded font-bold hover:bg-charcoal hover:text-white transition">Get in Touch</a>
+          <a href="tel:+233555123456" class="border-2 border-white px-8 py-3 rounded font-bold hover:bg-white hover:text-primary transition">
+            <i data-feather="phone" class="inline w-5 h-5 mr-2"></i> Call Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-charcoal text-light py-12">
+      <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+        <div class="col-span-2">
+          <span class="font-logo text-2xl font-bold text-primary tracking-widest">ASCENDER</span>
+          <p class="mt-4 text-light/80">Empowering Africa's Mining Future through innovative equipment, engineering solutions, and unparalleled service.</p>
+          <div class="mt-6">
+            <h5 class="font-bold mb-3">Headquarters</h5>
+            <p class="text-light/80">Mining District, Tarkwa<br>Western Region, Ghana</p>
+          </div>
+        </div>
+        <div>
+          <h5 class="font-bold mb-3">Quick Links</h5>
+          <ul class="space-y-2">
+            <li><a href="#equipment" class="hover:text-primary transition">Equipment Catalog</a></li>
+            <li><a href="#projects" class="hover:text-primary transition">Case Studies</a></li>
+            <li><a href="#about" class="hover:text-primary transition">Our Team</a></li>
+            <li><a href="#" class="hover:text-primary transition">Careers</a></li>
+            <li><a href="#" class="hover:text-primary transition">Admin Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold mb-3">Contact Us</h5>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <i data-feather="mail" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+              <span>info@ascender.africa<br>sales@ascender.africa</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-feather="phone" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+              <span>+233 555 123 456<br>+233 555 789 012</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-feather="message-circle" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+              <span>WhatsApp: +233 555 123 456</span>
+            </li>
+            <li class="flex gap-4 mt-4">
+              <a href="#" class="hover:text-primary transition"><i data-feather="linkedin" class="w-6 h-6"></i></a>
+              <a href="#" class="hover:text-primary transition"><i data-feather="twitter" class="w-6 h-6"></i></a>
+              <a href="#" class="hover:text-primary transition"><i data-feather="facebook" class="w-6 h-6"></i></a>
+              <a href="#" class="hover:text-primary transition"><i data-feather="youtube" class="w-6 h-6"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center text-xs text-light/60 mt-8 pt-8 border-t border-white/10">&copy; 2024 ASCENDER. All rights reserved.</div>
+    </footer>
+
+    <!-- GSAP, AOS, Feather Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // GSAP Hero Animation
+      gsap.from('#hero-title', { opacity: 0, y: 60, duration: 1.2, ease: 'power3.out' });
+      // AOS Init
+      AOS.init({ once: true, duration: 900, offset: 60 });
+      // Feather Icons
+      feather.replace();
+      // Mobile menu toggle
+      document.getElementById('menu-btn').onclick = function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      };
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('#mobile-menu a').forEach(item => {
+        item.addEventListener('click', () => {
+          document.getElementById('mobile-menu').classList.add('hidden');
+        });
+      });
+    </script>
+  </body>
+</html>
